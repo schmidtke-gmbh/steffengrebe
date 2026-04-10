@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouTube-Strategie | Honorarfinanz Stuttgart | Schmidtke GmbH</title>
+<style>
+  /* ===== SK MODERNIST FONT ===== */
+  @font-face {
+    font-family: 'SK Modernist';
+    src: url('https://aosparadox.github.io/fonts/sk-modernist-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'SK Modernist';
+    src: url('https://aosparadox.github.io/fonts/sk-modernist-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /* ===== SCHMIDTKE CI VARIABLES ===== */
+  :root {
+    --navy: #07162A;
+    --navy-mid: #0F2440;
+    --navy-light: #1A3556;
+    --red: #E62F1F;
+    --red-dark: #C4261A;
+    --blue: #277DC1;
+    --blue-light: #3A9AE0;
+    --light: #EEEEEF;
+    --dark: #07071A;
+    --white: #FFFFFF;
+    --gray: #8B95A5;
+    --gray-dark: #505B74;
+    --gray-light: #D2D7DF;
+    --font: 'SK Modernist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --radius: 10px;
+    --shadow: 0px 4px 32px rgba(7,7,26,0.08), 0px 8px 48px rgba(7,7,26,0.06);
+    --shadow-lg: 0px 8px 56px rgba(7,7,26,0.1), 0px 32px 140px rgba(7,7,26,0.1);
+  }
+
+  /* ===== RESET ===== */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font);
+    color: var(--dark);
+    line-height: 1.7;
+    background: var(--light);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: linear-gradient(210deg, rgb(50 62 85) 0%, var(--navy) 60%, #000 100%);
+    color: var(--white);
+    min-height: 560px;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 45%;
+    background: linear-gradient(to left, rgba(0,0,0,0.1), transparent);
+    pointer-events: none;
+  }
+  .hero-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0;
+    align-items: end;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(230,47,31,0.15);
+    border: 1px solid rgba(230,47,31,0.35);
+    color: #FF6B5E;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .hero-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--red);
+    border-radius: 50%;
+  }
+  .hero h1 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+  .hero h1 span { color: var(--red); }
+  .hero .subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--gray-light);
+    line-height: 1.6;
+    max-width: 480px;
+  }
+  .hero-meta {
+    margin-top: 28px;
+    display: flex;
+    gap: 24px;
+    font-size: 13px;
+    color: var(--gray);
+  }
+  .hero-meta strong { color: var(--gray-light); }
+  .hero-photo {
+    flex-shrink: 0;
+    align-self: flex-end;
+    position: relative;
+  }
+  .hero-photo img {
+    display: block;
+    height: 480px;
+    width: auto;
+    object-fit: contain;
+    object-position: bottom;
+    filter: drop-shadow(8px 4px 30px rgba(0,0,0,0.5));
+  }
+
+  /* ===== NAV ===== */
+  .toc {
+    background: var(--white);
+    border-bottom: 1px solid rgba(7,22,42,0.08);
+    padding: 16px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .toc-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .toc-brand {
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--navy);
+    margin-right: 16px;
+    letter-spacing: 0.3px;
+  }
+  .toc a {
+    padding: 6px 14px;
+    background: transparent;
+    color: var(--gray-dark);
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 400;
+    transition: all 0.2s;
+  }
+  .toc a:hover {
+    background: rgba(7,22,42,0.06);
+    color: var(--navy);
+  }
+
+  /* ===== SECTIONS ===== */
+  section { padding: 64px 40px; }
+  section.white { background: var(--white); }
+  section.light { background: var(--light); }
+
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--red);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .section-label::before {
+    content: '';
+    width: 24px; height: 2px;
+    background: var(--red);
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+  }
+  .section-desc {
+    font-size: 16px;
+    color: var(--gray-dark);
+    max-width: 640px;
+    margin-bottom: 36px;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 36px 0 16px;
+  }
+  h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy-mid);
+    margin: 16px 0 8px;
+  }
+  p { margin-bottom: 14px; color: #3A4255; font-size: 15px; }
+
+  /* ===== CARDS ===== */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 28px 0;
+  }
+  .card {
+    background: var(--white);
+    border: 1px solid rgba(7,22,42,0.06);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+  .card-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: var(--white);
+  }
+  .card h4 { margin: 0 0 6px; font-size: 16px; }
+  .card p { margin: 0; font-size: 14px; color: var(--gray-dark); }
+
+  /* ===== COMPETITOR ===== */
+  .competitor {
+    background: var(--white);
+    border: 1px solid rgba(7,22,42,0.06);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    margin: 14px 0;
+    box-shadow: var(--shadow);
+  }
+  .competitor-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .competitor h4 { margin: 0; font-size: 17px; color: var(--navy); }
+  .tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+  .tag-red { background: rgba(230,47,31,0.1); color: var(--red); }
+  .tag-blue { background: rgba(39,125,193,0.1); color: var(--blue); }
+  .tag-navy { background: rgba(7,22,42,0.08); color: var(--navy); }
+  .tag-green { background: rgba(5,150,105,0.1); color: #059669; }
+  .tag-purple { background: rgba(109,40,217,0.1); color: #6D28D9; }
+  .tag-time { background: rgba(7,22,42,0.05); color: var(--gray-dark); font-weight: 400; }
+
+  .competitor ul { list-style: none; }
+  .competitor li {
+    padding: 5px 0 5px 18px;
+    position: relative;
+    font-size: 14px;
+    color: #3A4255;
+  }
+  .competitor li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 13px;
+    width: 6px; height: 6px;
+    background: var(--gray-light);
+    border-radius: 50%;
+  }
+  .pro { color: #059669; font-weight: 700; }
+  .con { color: #D97706; font-weight: 700; }
+
+  /* ===== TABLE ===== */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 28px 0;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  thead th {
+    background: var(--navy);
+    color: var(--white);
+    padding: 14px 18px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  tbody td {
+    padding: 14px 18px;
+    border-bottom: 1px solid rgba(7,22,42,0.06);
+    vertical-align: top;
+    background: var(--white);
+  }
+  tbody tr:nth-child(even) td { background: #F8F9FB; }
+
+  /* ===== PILLARS ===== */
+  .pillar-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 28px 0;
+  }
+  .pillar {
+    border-radius: var(--radius);
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.04);
+  }
+  .pillar h4 { font-size: 18px; color: var(--navy); margin: 0 0 4px; }
+  .pillar .pillar-motto { font-size: 13px; color: var(--gray-dark); font-style: italic; margin-bottom: 14px; }
+  .pillar ul { list-style: none; }
+  .pillar li { font-size: 14px; padding: 3px 0; color: #3A4255; }
+  .pillar li::before { content: '\2192'; margin-right: 8px; color: var(--gray); }
+  .pillar .freq {
+    display: inline-block;
+    margin-top: 14px;
+    background: rgba(7,22,42,0.06);
+    padding: 4px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .pillar-1 { background: linear-gradient(135deg, #FEF3C7, #FDE68A); }
+  .pillar-2 { background: linear-gradient(135deg, #DBEAFE, #BFDBFE); }
+  .pillar-3 { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); }
+  .pillar-4 { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); }
+
+  /* ===== DREH-VIDEOS (the 4 detailed shoot plans) ===== */
+  .dreh-video {
+    background: var(--white);
+    border: 1px solid rgba(7,22,42,0.06);
+    border-radius: var(--radius);
+    margin: 24px 0;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .dreh-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .dreh-num {
+    width: 48px; height: 48px;
+    background: var(--red);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .dreh-header h3 { margin: 0; color: var(--white); font-size: 18px; line-height: 1.3; }
+  .dreh-header .dreh-tags { display: flex; gap: 8px; margin-top: 4px; }
+  .dreh-header .dreh-tags span {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 400;
+  }
+  .dreh-header .dreh-tags .t1 { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.8); }
+  .dreh-header .dreh-tags .t2 { background: rgba(230,47,31,0.3); color: #FFB3AD; }
+  .dreh-body { padding: 28px; }
+  .dreh-body h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--red);
+    margin: 24px 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .dreh-body h4:first-child { margin-top: 0; }
+  .dreh-body h4::before {
+    content: '';
+    width: 16px; height: 2px;
+    background: var(--red);
+  }
+  .dreh-body p { font-size: 14px; margin-bottom: 10px; }
+  .dreh-body ol, .dreh-body ul { padding-left: 20px; margin: 8px 0 16px; }
+  .dreh-body li { font-size: 14px; color: #3A4255; padding: 3px 0; }
+  .dreh-body .time-block {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 4px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  .dreh-body .time-block .time {
+    font-weight: 700;
+    color: var(--navy);
+    font-variant-numeric: tabular-nums;
+  }
+  .dreh-body .tip-box {
+    background: rgba(39,125,193,0.06);
+    border-left: 3px solid var(--blue);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 16px 0;
+    font-size: 13px;
+    color: var(--navy-mid);
+  }
+  .dreh-body .tip-box strong { color: var(--blue); }
+
+  /* ===== VIDEO LIST (remaining 8) ===== */
+  .video-list { margin: 24px 0; }
+  .video-item {
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+    gap: 14px;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(7,22,42,0.06);
+  }
+  .video-item:last-child { border-bottom: none; }
+  .video-num {
+    width: 40px; height: 40px;
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .video-info h4 { margin: 0 0 4px; font-size: 15px; }
+  .video-info .meta { display: flex; gap: 8px; flex-wrap: wrap; }
+  .video-keyword {
+    font-size: 12px;
+    color: var(--gray);
+    text-align: right;
+  }
+
+  /* ===== KPI ===== */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 28px 0;
+  }
+  .kpi {
+    background: var(--white);
+    border: 1px solid rgba(7,22,42,0.06);
+    border-radius: var(--radius);
+    padding: 24px;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+  .kpi-label { font-size: 12px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+  .kpi-val { font-size: 28px; font-weight: 700; color: var(--navy); }
+  .kpi-sub { font-size: 14px; color: #059669; font-weight: 700; margin-top: 4px; }
+
+  /* ===== STEPS ===== */
+  .steps { margin: 28px 0; }
+  .step {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .step-dot {
+    width: 32px; height: 32px;
+    background: var(--red);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .step p { margin: 0; padding-top: 5px; font-size: 15px; }
+
+  /* ===== CALLOUT ===== */
+  .callout {
+    background: var(--navy);
+    color: var(--white);
+    border-radius: var(--radius);
+    padding: 36px;
+    margin: 36px 0;
+  }
+  .callout h3 { color: var(--red); margin: 0 0 12px; font-size: 20px; }
+  .callout p { color: rgba(255,255,255,0.85); font-size: 15px; margin: 0; }
+
+  /* ===== INSIGHTS ===== */
+  .insight-list { margin: 24px 0; }
+  .insight {
+    display: flex;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(7,22,42,0.06);
+  }
+  .insight:last-child { border-bottom: none; }
+  .insight-check {
+    width: 24px; height: 24px;
+    background: #059669;
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .insight p { margin: 0; font-size: 15px; }
+
+  /* ===== TIP GRID ===== */
+  .tip-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 24px 0;
+  }
+  .tip {
+    background: var(--white);
+    border: 1px solid rgba(7,22,42,0.06);
+    border-radius: 8px;
+    padding: 16px 20px;
+    box-shadow: var(--shadow);
+  }
+  .tip strong { display: block; font-size: 14px; color: var(--navy); margin-bottom: 4px; }
+  .tip span { font-size: 13px; color: var(--gray-dark); }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--navy);
+    color: var(--gray);
+    text-align: center;
+    padding: 32px 40px;
+    font-size: 13px;
+  }
+  footer strong { color: var(--gray-light); }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 768px) {
+    .hero { min-height: auto; }
+    .hero-grid { grid-template-columns: 1fr; padding: 0 24px; text-align: center; }
+    .hero-grid > div:last-child { padding: 0 0 40px 0 !important; }
+    .hero h1 { font-size: 28px; }
+    .hero .subtitle { max-width: 100%; }
+    .hero-meta { justify-content: center; }
+    .hero-photo { margin: 0 auto; }
+    .hero-photo img { height: 320px; margin: 0 auto; }
+    section { padding: 40px 20px; }
+    .pillar-grid { grid-template-columns: 1fr; }
+    .kpi-grid { grid-template-columns: 1fr; }
+    .tip-grid { grid-template-columns: 1fr; }
+    .video-item { grid-template-columns: 36px 1fr; }
+    .video-keyword { display: none; }
+    .toc { padding: 12px 20px; }
+    .toc-brand { display: none; }
+    .toc a { font-size: 12px; padding: 5px 10px; }
+    .dreh-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .dreh-body .time-block { grid-template-columns: 1fr; }
+    .dreh-body .time-block .time { margin-top: 6px; }
+    h2 { font-size: 24px; }
+    .card-grid { grid-template-columns: 1fr; }
+  }
+
+  @media print {
+    .toc { display: none; }
+    section { page-break-inside: avoid; padding: 24px 0; }
+    .dreh-video { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <div class="hero-grid">
+    <div class="hero-photo">
+      <img src="steffen-grebe.png" alt="Steffen Grebe &ndash; Honorarfinanz Stuttgart" />
+    </div>
+    <div style="padding:60px 0 60px 40px;align-self:center;">
+      <div class="hero-badge">YouTube-Strategie 2026</div>
+      <h1>YouTube-Kanal<br><span>Honorarfinanz Stuttgart</span></h1>
+      <p class="subtitle">Hey Steffen &ndash; hier ist dein Plan: Konkurrenzanalyse, Content-Strategie und detaillierter Drehplan f&uuml;r deine ersten vier Videos.</p>
+      <div class="hero-meta">
+        <div><strong>Kunde</strong>&ensp;Steffen Grebe</div>
+        <div><strong>Stand</strong>&ensp;April 2026</div>
+        <div><strong>Agentur</strong>&ensp;Schmidtke GmbH</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== NAV ===== -->
+<nav class="toc">
+  <div class="toc-inner">
+    <span class="toc-brand">SCHMIDTKE</span>
+    <a href="#ausgangslage">Ausgangslage</a>
+    <a href="#konkurrenz">Konkurrenz</a>
+    <a href="#strategie">Strategie</a>
+    <a href="#drehplan">Drehplan</a>
+    <a href="#weitere">Weitere Videos</a>
+    <a href="#seo">SEO &amp; Produktion</a>
+    <a href="#funnel">Funnel &amp; CLV</a>
+    <a href="#kpis">KPIs</a>
+  </div>
+</nav>
+
+<!-- ===== 1. AUSGANGSLAGE ===== -->
+<section class="white" id="ausgangslage">
+  <div class="section-inner">
+    <div class="section-label">01 &mdash; Ausgangslage</div>
+    <h2>Positionierung &amp; Alleinstellungsmerkmale</h2>
+    <p class="section-desc">Du betreibst als unabh&auml;ngiger Honorar-Anlageberater (BaFin-lizenziert, Nr.&nbsp;80133585) seit 2016 den Standort Stuttgart der Honorarfinanz AG. Sitz ist Bietigheim-Bissingen, dein Einzugsgebiet: Stuttgart, Ludwigsburg, Heilbronn.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon" style="background:var(--red);">B</div>
+        <h4>BaFin-lizenziert</h4>
+        <p>Eines von nur ca. 19 staatlich zugelassenen Instituten f&uuml;r unabh&auml;ngige Anlageberatung in ganz Deutschland.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:var(--navy);">0&euro;</div>
+        <h4>100% Provisionsfrei</h4>
+        <p>Gesetzlich garantiertes Provisionsannahmeverbot. Beratung ausschlie&szlig;lich auf Honorarbasis, keine versteckten Kosten.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:var(--blue);">ETF</div>
+        <h4>Wissenschaftlich fundiert</h4>
+        <p>Prognosefreie Anlageberatung auf Basis von ETFs und Assetklassen-Indexfonds. Keine Spekulation.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:#059669;">4.8</div>
+        <h4>263 Bewertungen, 4,84/5</h4>
+        <p>100% Weiterempfehlung auf ProvenExpert. Pressepr&auml;senz in FAZ, Handelsblatt, S&uuml;ddeutsche Zeitung.</p>
+      </div>
+    </div>
+
+    <h3>Zielgruppe f&uuml;r YouTube</h3>
+    <p>Deine Kernzielgruppe sind Personen <strong>50+</strong> mit hohem Nettoverm&ouml;gen (200K&ndash;500K+), die pers&ouml;nliche Beratung vor Ort bevorzugen. Die haben h&auml;ufig Geld auf Spar- und Tagesgeldkonten, das durch Inflation an Wert verliert, oder schlechte Erfahrungen mit Strukturvertrieben (DVAG, MLP) gemacht. Der &bdquo;Stallgeruch&ldquo; &ndash; also deine regionale Verankerung und pers&ouml;nliche Begegnung &ndash; ist der entscheidende Vertrauensfaktor.</p>
+    <div class="tip-grid">
+      <div class="tip"><strong>Verm&ouml;gende 50+ Generation</strong><span>200K&ndash;500K+ Anlageverm&ouml;gen, bevorzugen pers&ouml;nliche Beratung (Face-to-Face) in der Region Stuttgart</span></div>
+      <div class="tip"><strong>Entt&auml;uschte Strukturvertriebs-Kunden</strong><span>Schlechte Erfahrungen mit DVAG, MLP oder Bankberatern &ndash; versteckte Provisionen entdeckt, suchen echte Unabh&auml;ngigkeit</span></div>
+      <div class="tip"><strong>Sparkonten-Besitzer</strong><span>Gro&szlig;es Verm&ouml;gen auf Tagesgeld/Festgeld, das durch Inflation real an Wert verliert &ndash; wollen handeln, wissen aber nicht wie</span></div>
+      <div class="tip"><strong>Unternehmer, Erben &amp; Ruhestandsplaner</strong><span>Bedarf an ganzheitlicher Finanzplanung: Erbschaft, Unternehmensverkauf, Ruhestand oder Verm&ouml;gens&uuml;bertrag</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2. KONKURRENZ ===== -->
+<section class="light" id="konkurrenz">
+  <div class="section-inner">
+    <div class="section-label">02 &mdash; Konkurrenzanalyse</div>
+    <h2>YouTube im Honorarberatungs-Umfeld</h2>
+    <p class="section-desc">Wer macht was auf YouTube &ndash; und wo liegen die L&uuml;cken, die du besetzen kannst?</p>
+
+    <h3>Direkte Wettbewerber</h3>
+
+    <div class="competitor">
+      <div class="competitor-head">
+        <h4>Klaus Rombach &ndash; Honorarfinanz Freiburg</h4>
+        <span class="tag tag-blue">YouTube + Podcast</span>
+      </div>
+      <ul>
+        <li>Themen: Marktanalysen, ETF-Strategien, Inflation, Altersvorsorge, B&ouml;rsenpsychologie</li>
+        <li>Format: Video-Podcast &bdquo;Kapitalgespr&auml;che&ldquo; im Gespr&auml;chsformat</li>
+        <li><span class="pro">St&auml;rke:</span> Regelm&auml;&szlig;igkeit, klare Expertise, kein Verkaufsdruck</li>
+        <li><span class="con">Schw&auml;che:</span> Begrenzte Reichweite, wenig SEO-optimierte Titel</li>
+      </ul>
+    </div>
+
+    <div class="competitor">
+      <div class="competitor-head">
+        <h4>Thomas Beutler &ndash; &bdquo;Investiert in Wissen&ldquo;</h4>
+        <span class="tag tag-green">YouTube + Podcast + Social</span>
+      </div>
+      <ul>
+        <li>Themen: Altersvorsorge-Check, Verm&ouml;gensaufbau, ETF-Indexfonds, Vertragsanalyse</li>
+        <li>Positionierung: Verbraucherschutz, Aufkl&auml;rung &uuml;ber Interessenkonflikte</li>
+        <li><span class="pro">St&auml;rke:</span> Breites Themenspektrum, vertrauensw&uuml;rdiger Auftritt</li>
+        <li><span class="con">Schw&auml;che:</span> Kein regionaler Fokus</li>
+      </ul>
+    </div>
+
+    <h3>Strategischer Benchmark: Gerd Kommer</h3>
+    <div class="competitor">
+      <div class="competitor-head">
+        <h4>Gerd Kommer &ndash; Gerd Kommer Capital</h4>
+        <span class="tag tag-purple">2,4 Mrd. AUM &middot; National</span>
+      </div>
+      <ul>
+        <li>Themen: Wissenschaftlich fundiertes Investieren, ETF-Weltportfolio, Immobilien-Mythen, Finanz-Aufkl&auml;rung</li>
+        <li>Positionierung: Akademisch-intellektuell, Bestseller-Autor, b&uuml;ro&auml;hnliches Setting &ndash; &auml;hnliche Office-&Auml;sthetik wie bei dir</li>
+        <li><span class="pro">Lernen:</span> Gleicher Anlagephilosophie-Kern (prognosefreie ETF-Anlage). Beweis, dass das Konzept skaliert &ndash; Kommer verwaltet 2,4 Mrd.&euro;</li>
+        <li><span class="con">Differenzierung:</span> Du bist pers&ouml;nlicher, regionaler und greifbarer. Kommer ist &bdquo;der Professor&ldquo;, du bist &bdquo;der Berater von nebenan&ldquo;, den man wirklich treffen kann</li>
+        <li><span class="pro">Chance:</span> Du kannst dich als &bdquo;den Gerd Kommer f&uuml;r Stuttgart&ldquo; positionieren &ndash; gleiche Philosophie, aber mit pers&ouml;nlicher Betreuung vor Ort</li>
+      </ul>
+    </div>
+
+    <h3>Gro&szlig;e Orientierungskan&auml;le</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Kanal</th><th>Abonnenten</th><th>Top-Themen</th><th>Lerneffekt</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Finanzfluss</strong></td><td>2,58 Mio.</td><td>ETF-Sparpl&auml;ne, Steuern, Verm&ouml;gensaufbau</td><td>Einfache Erkl&auml;rungen, starke Thumbnails</td></tr>
+          <tr><td><strong>Finanztip</strong></td><td>566.000+</td><td>Versicherungs-Checks, Spartipps, Rente</td><td>Verbraucherschutz-Perspektive</td></tr>
+          <tr><td><strong>Aktien mit Kopf</strong></td><td>275.000+</td><td>Aktienanalysen, Dividenden, Mindset</td><td>Pers&ouml;nliche Marke, Community</td></tr>
+          <tr><td><strong>Echtgeld.tv</strong></td><td>16.200+</td><td>Live-Investments in Echtzeit</td><td>Authentizit&auml;t, Nischenformat</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Zentrale Erkenntnisse</h3>
+    <div class="insight-list">
+      <div class="insight"><div class="insight-check">&check;</div><p>Die direkte Konkurrenz hat kleine Kan&auml;le mit unregelm&auml;&szlig;igem Upload &ndash; <strong>du kannst die schnell &uuml;berholen.</strong></p></div>
+      <div class="insight"><div class="insight-check">&check;</div><p><strong>Kein Wettbewerber kombiniert regionalen Fokus (Stuttgart) mit Honorarberatungs-Content</strong> &ndash; die Nische ist offen f&uuml;r dich.</p></div>
+      <div class="insight"><div class="insight-check">&check;</div><p>Evergreen-Videos (ETF, Honorar vs. Provision, Depot-Check) performen langfristig &uuml;ber YouTube-Suche &ndash; das sind genau deine Themen.</p></div>
+      <div class="insight"><div class="insight-check">&check;</div><p>Der Verbraucherschutz-Ansatz erzeugt hohes Vertrauen &ndash; passt perfekt zu deiner Positionierung.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. STRATEGIE ===== -->
+<section class="white" id="strategie">
+  <div class="section-inner">
+    <div class="section-label">03 &mdash; Kanalstrategie</div>
+    <h2>Vier Content-S&auml;ulen</h2>
+    <p class="section-desc">Dein Kanal positioniert sich als regionale Autorit&auml;t f&uuml;r unabh&auml;ngige Finanzberatung &ndash; nicht Entertainment oder Tagesnews, sondern zeitlose Mythos-Entlarvung, echte Fallstudien und vertrauensw&uuml;rdige Expertise. Du als &bdquo;Geheimtipp&ldquo; und &bdquo;Gerd Kommer f&uuml;r Stuttgart&ldquo;.</p>
+
+    <div class="pillar-grid">
+      <div class="pillar pillar-1">
+        <h4>S&auml;ule 1: Aufkl&auml;rung</h4>
+        <p class="pillar-motto">&bdquo;Was Ihr Bankberater Ihnen nicht sagt&ldquo;</p>
+        <ul>
+          <li>Versteckte Kosten entlarvt</li>
+          <li>Provisionsmodell erkl&auml;rt</li>
+          <li>Typische Anlegerfehler</li>
+        </ul>
+        <span class="freq">2&times; / Monat</span>
+      </div>
+      <div class="pillar pillar-2">
+        <h4>S&auml;ule 2: Wissen</h4>
+        <p class="pillar-motto">&bdquo;So funktioniert Geldanlage wirklich&ldquo;</p>
+        <ul>
+          <li>ETF-Grundlagen</li>
+          <li>Ruhestandsplanung</li>
+          <li>Steuertipps f&uuml;r Anleger</li>
+        </ul>
+        <span class="freq">2&times; / Monat</span>
+      </div>
+      <div class="pillar pillar-3">
+        <h4>S&auml;ule 3: Regional</h4>
+        <p class="pillar-motto">&bdquo;Finanzberatung in Stuttgart&ldquo;</p>
+        <ul>
+          <li>Immobilienmarkt Stuttgart</li>
+          <li>Regionale Finanztipps</li>
+          <li>Stuttgarter Fallbeispiele</li>
+        </ul>
+        <span class="freq">1&times; / Monat</span>
+      </div>
+      <div class="pillar pillar-4">
+        <h4>S&auml;ule 4: Fallstudien &amp; Vertrauen</h4>
+        <p class="pillar-motto">&bdquo;Echte Ergebnisse aus der Praxis&ldquo;</p>
+        <ul>
+          <li>Anonymisierte Kunden-Cases (z.B. Ingenieur: +206K Verm&ouml;genswachstum)</li>
+          <li>Vorher/Nachher: Von DVAG-Depot zu ETF-Portfolio</li>
+          <li>&bdquo;Wie wir beraten&ldquo; &ndash; Einblick in den Beratungsprozess</li>
+          <li>Kundenfragen aus der Praxis beantwortet</li>
+        </ul>
+        <span class="freq">1&ndash;2&times; / Monat</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. DREHPLAN: 4 VIDEOS ===== -->
+<section class="light" id="drehplan">
+  <div class="section-inner">
+    <div class="section-label">04 &mdash; Drehplan: Erste 4 Videos</div>
+    <h2>Was wir beim ersten Dreh produzieren</h2>
+    <p class="section-desc">Die folgenden vier Videos nehmen wir beim ersten Vor-Ort-Termin zusammen auf. Jedes Video hat einen klaren Ablauf, Sprechstruktur und Hinweise f&uuml;r dich. Alle Videos sind im <strong>Talking-Head-Format</strong> &ndash; du sprichst direkt in die Kamera.</p>
+
+    <!-- VIDEO 1 -->
+    <div class="dreh-video">
+      <div class="dreh-header">
+        <div class="dreh-num">1</div>
+        <div>
+          <h3>Honorarberater vs. Provisionsberater &ndash; Der Unterschied, der Sie Tausende Euro kostet</h3>
+          <div class="dreh-tags">
+            <span class="t1">S&auml;ule: Aufkl&auml;rung</span>
+            <span class="t2">8&ndash;12 Minuten</span>
+          </div>
+        </div>
+      </div>
+      <div class="dreh-body">
+        <h4>Ziel &amp; Keyword</h4>
+        <p>Das wichtigste Video deines Kanals &ndash; erkl&auml;rt den fundamentalen Unterschied und positioniert dich sofort als unabh&auml;ngigen Experten. Haupt-Keyword: <strong>&bdquo;Honorarberater vs Provisionsberater&ldquo;</strong></p>
+
+        <h4>Ablauf &amp; Zeitstruktur</h4>
+        <div class="time-block">
+          <span class="time">0:00&ndash;0:30</span><span><strong>Hook:</strong> &bdquo;Wussten Sie, dass der durchschnittliche Deutsche &uuml;ber sein Anlegerleben 40.000&ndash;80.000&euro; an versteckten Kosten an seinen Berater zahlt &ndash; ohne es zu wissen?&ldquo;</span>
+          <span class="time">0:30&ndash;2:00</span><span><strong>Problem:</strong> Kurz erkl&auml;ren, wie das Provisionsmodell funktioniert. Wer zahlt wen? Warum ist der Berater nicht auf Ihrer Seite?</span>
+          <span class="time">2:00&ndash;5:00</span><span><strong>Vergleich:</strong> Provisionsberater vs. Honorarberater im direkten Vergleich. Einfache Grafik/Tabelle einblenden: Kosten, Unabh&auml;ngigkeit, Produktauswahl, gesetzliche Aufsicht.</span>
+          <span class="time">5:00&ndash;7:00</span><span><strong>Praxisbeispiel:</strong> Anonymisierter Kundenfall: &bdquo;Ein Ingenieur kam zu mir nach Jahren bei einem Strukturvertrieb. Sein Depot war voller teurer Fonds mit versteckten Kosten. Allein durch den Wechsel auf ETFs sparte er 1,8% pro Jahr &ndash; und hat inzwischen &uuml;ber 200.000&euro; Verm&ouml;genszuwachs erzielt.&ldquo; Rechnung zeigen. Konkret benennen: DVAG, MLP als typische Beispiele f&uuml;r Provisionsvertrieb.</span>
+          <span class="time">7:00&ndash;9:00</span><span><strong>BaFin-Erkl&auml;rung:</strong> Was bedeutet die BaFin-Zulassung? Warum ist sie so selten? Was garantiert sie dem Kunden?</span>
+          <span class="time">9:00&ndash;10:00</span><span><strong>CTA:</strong> &bdquo;Wenn Sie wissen m&ouml;chten, wie viel Sie aktuell an versteckten Kosten zahlen &ndash; buchen Sie ein kostenloses, unverbindliches Kennenlerngespr&auml;ch. 15 Minuten, kein Verkaufsdruck. Link in der Beschreibung.&ldquo; (Einstieg in den Sales Funnel: Erstgespr&auml;ch &rarr; Wissenstransfer &rarr; Finanzkonzept)</span>
+        </div>
+
+        <h4>Sprechhinweise</h4>
+        <p>Direkt in die Kamera, ruhig und sachlich. Keine Hetze gegen Bankberater &ndash; stattdessen systemische Erkl&auml;rung. &bdquo;Es liegt nicht am einzelnen Berater, sondern am System dahinter.&ldquo;</p>
+
+        <div class="tip-box">
+          <strong>Format:</strong> Talking Head &ndash; du sprichst direkt in die Kamera. Vergleichstabelle wird als Grafik eingeblendet. Am Ende kurzer B-Roll vom B&uuml;ro/Beratungsraum.
+        </div>
+      </div>
+    </div>
+
+    <!-- VIDEO 2 -->
+    <div class="dreh-video">
+      <div class="dreh-header">
+        <div class="dreh-num">2</div>
+        <div>
+          <h3>ETF-Anlage erkl&auml;rt: So investieren wir Ihr Geld wirklich</h3>
+          <div class="dreh-tags">
+            <span class="t1">S&auml;ule: Wissen</span>
+            <span class="t2">10&ndash;15 Minuten</span>
+          </div>
+        </div>
+      </div>
+      <div class="dreh-body">
+        <h4>Ziel &amp; Keyword</h4>
+        <p>Evergreen-Erkl&auml;rvideo, das langfristig &uuml;ber YouTube-Suche gefunden wird. Keywords: <strong>&bdquo;ETF Anlageberatung&ldquo;</strong>, <strong>&bdquo;ETF f&uuml;r Anf&auml;nger&ldquo;</strong>, <strong>&bdquo;Geld anlegen ETF&ldquo;</strong></p>
+
+        <h4>Ablauf &amp; Zeitstruktur</h4>
+        <div class="time-block">
+          <span class="time">0:00&ndash;0:40</span><span><strong>Hook:</strong> &bdquo;Viele meiner Kunden fragen mich: Herr Grebe, was genau machen Sie eigentlich mit meinem Geld? Die Antwort ist &uuml;berraschend einfach.&ldquo;</span>
+          <span class="time">0:40&ndash;3:00</span><span><strong>Was ist ein ETF?</strong> In 2 Minuten erkl&auml;rt. Einfache Analogie: &bdquo;Stellen Sie sich vor, Sie kaufen nicht ein einzelnes Haus, sondern einen kleinen Anteil an allen H&auml;usern der Stadt.&ldquo;</span>
+          <span class="time">3:00&ndash;6:00</span><span><strong>Warum ETFs?</strong> Kostenvergleich aktive Fonds vs. ETFs. Grafik: 1,5% Kostenunterschied &uuml;ber 20 Jahre = X Euro Differenz bei 100.000&euro; Anlage.</span>
+          <span class="time">6:00&ndash;9:00</span><span><strong>Wie wir investieren:</strong> Assetklassen-Ansatz erkl&auml;ren. Weltportfolio-Prinzip. &bdquo;Wir setzen nicht auf Prognosen, sondern auf die Kraft der globalen M&auml;rkte.&ldquo;</span>
+          <span class="time">9:00&ndash;12:00</span><span><strong>H&auml;ufige Fehler:</strong> Market-Timing, Home-Bias, zu wenig Diversifikation. Jeweils kurz mit Beispiel.</span>
+          <span class="time">12:00&ndash;13:00</span><span><strong>CTA:</strong> &bdquo;Sie haben schon ein Depot und m&ouml;chten wissen, ob es optimal aufgestellt ist? Buchen Sie unseren Depot-Check.&ldquo;</span>
+        </div>
+
+        <h4>Sprechhinweise</h4>
+        <p>Hier darfst du etwas erkl&auml;render werden. Langsamer sprechen bei Fachbegriffen. Praxisn&auml;he durch echte Zahlen. Nicht belehrend, sondern: &bdquo;Lassen Sie mich zeigen, wie das in der Praxis aussieht.&ldquo;</p>
+
+        <div class="tip-box">
+          <strong>Format:</strong> Talking Head mit eingeblendeten Grafiken (Beispielrechnung, Kostenvergleich). Freiheitsrechner kurz zeigen als Teaser f&uuml;r sp&auml;teres Video.
+        </div>
+      </div>
+    </div>
+
+    <!-- VIDEO 3 -->
+    <div class="dreh-video">
+      <div class="dreh-header">
+        <div class="dreh-num">3</div>
+        <div>
+          <h3>Finanzberatung Stuttgart: Worauf Sie achten m&uuml;ssen</h3>
+          <div class="dreh-tags">
+            <span class="t1">S&auml;ule: Regional</span>
+            <span class="t2">8&ndash;10 Minuten</span>
+          </div>
+        </div>
+      </div>
+      <div class="dreh-body">
+        <h4>Ziel &amp; Keyword</h4>
+        <p>Dein regionales SEO-Video, das bei der Suche &bdquo;Finanzberater Stuttgart&ldquo; ranken soll. Keywords: <strong>&bdquo;Finanzberater Stuttgart&ldquo;</strong>, <strong>&bdquo;Anlageberatung Stuttgart&ldquo;</strong>, <strong>&bdquo;Honorarberatung Stuttgart&ldquo;</strong></p>
+
+        <h4>Ablauf &amp; Zeitstruktur</h4>
+        <div class="time-block">
+          <span class="time">0:00&ndash;0:30</span><span><strong>Hook:</strong> &bdquo;Sie suchen einen Finanzberater in Stuttgart? Dann sollten Sie vorher diese drei Fragen stellen &ndash; bevor Sie einem Berater Ihr Geld anvertrauen.&ldquo;</span>
+          <span class="time">0:30&ndash;3:00</span><span><strong>Drei Fragen:</strong> 1. Wie verdienen Sie Ihr Geld? 2. Welche Zulassung haben Sie? 3. Wie unabh&auml;ngig sind Sie in der Produktauswahl?</span>
+          <span class="time">3:00&ndash;5:00</span><span><strong>Beraterlandschaft Stuttgart:</strong> Wie viele Berater gibt es in Stuttgart? Wie viele davon sind echte Honorarberater? (Spoiler: sehr wenige.) BaFin-Register zeigen.</span>
+          <span class="time">5:00&ndash;7:00</span><span><strong>Pers&ouml;nliche Vorstellung:</strong> &bdquo;Ich bin Steffen Grebe, seit 1991 in der Finanzbranche, seit 2016 Ihr Honorarberater in Stuttgart.&ldquo; Positioniere dich als &bdquo;Geheimtipp&ldquo;: exzellente Ergebnisse, 263 Bewertungen bei 4,84/5, aber noch relativ unbekannt. Philosophie erkl&auml;ren: gleicher Ansatz wie Gerd Kommer (prognosefreie ETF-Anlage), aber pers&ouml;nlich und greifbar vor Ort.</span>
+          <span class="time">7:00&ndash;8:30</span><span><strong>F&uuml;r wen ist Honorarberatung geeignet?</strong> Klare Antwort: ab welcher Summe es Sinn macht, welche Lebenslagen.</span>
+          <span class="time">8:30&ndash;9:30</span><span><strong>CTA:</strong> &bdquo;Lernen Sie mich kennen &ndash; in einem kostenlosen und unverbindlichen Erstgespr&auml;ch. Link unten.&ldquo;</span>
+        </div>
+
+        <h4>Sprechhinweise</h4>
+        <p>Pers&ouml;nlicher Ton. Das ist das Video, in dem du dich als Mensch zeigst. L&auml;cheln, Ruhe, Vertrauensw&uuml;rdigkeit. Hier verkaufst du nicht &ndash; du l&auml;dst ein.</p>
+
+        <div class="tip-box">
+          <strong>Format:</strong> Talking Head + B-Roll von Stuttgart (Schlossplatz, Skyline, dein B&uuml;ro). &bdquo;Stuttgart&ldquo; mehrfach in Titel, Beschreibung und Tags. Google Maps Standort verlinken.
+        </div>
+      </div>
+    </div>
+
+    <!-- VIDEO 4 -->
+    <div class="dreh-video">
+      <div class="dreh-header">
+        <div class="dreh-num">4</div>
+        <div>
+          <h3>5 Fehler bei der Geldanlage, die ich t&auml;glich sehe</h3>
+          <div class="dreh-tags">
+            <span class="t1">S&auml;ule: Aufkl&auml;rung</span>
+            <span class="t2">8&ndash;10 Minuten</span>
+          </div>
+        </div>
+      </div>
+      <div class="dreh-body">
+        <h4>Ziel &amp; Keyword</h4>
+        <p>Hat virales Potenzial durch das Listformat. Funktioniert sowohl f&uuml;r YouTube-Suche als auch f&uuml;r den Algorithmus. Keywords: <strong>&bdquo;Fehler Geldanlage&ldquo;</strong>, <strong>&bdquo;Anlegerfehler vermeiden&ldquo;</strong></p>
+
+        <h4>Ablauf &amp; Zeitstruktur</h4>
+        <div class="time-block">
+          <span class="time">0:00&ndash;0:30</span><span><strong>Hook:</strong> &bdquo;In 30 Jahren Finanzbranche habe ich diese f&uuml;nf Fehler immer und immer wieder gesehen. Der f&uuml;nfte hat meine Kunden am meisten Geld gekostet.&ldquo;</span>
+          <span class="time">0:30&ndash;2:30</span><span><strong>Fehler 1: Zu lange warten.</strong> Zinseszins-Effekt erkl&auml;ren. Grafik: 10 Jahre fr&uuml;her anfangen = X Euro mehr.</span>
+          <span class="time">2:30&ndash;4:00</span><span><strong>Fehler 2: Zu viel auf dem Tagesgeldkonto.</strong> Das h&auml;ufigste Problem in der Praxis: Kunden sitzen auf 200K&ndash;500K auf Spar- und Tagesgeldkonten. Inflation frisst real 2&ndash;3% pro Jahr. Beispielrechnung: 300.000&euro; auf dem Tagesgeld verlieren in 10 Jahren &uuml;ber 50.000&euro; an Kaufkraft.</span>
+          <span class="time">4:00&ndash;5:30</span><span><strong>Fehler 3: Dem Bankberater blind vertrauen.</strong> Querverweis auf Video 1. &bdquo;Fragen Sie immer: Wie verdienen Sie an mir?&ldquo;</span>
+          <span class="time">5:30&ndash;7:00</span><span><strong>Fehler 4: Market-Timing.</strong> Beispiel: Wer die 10 besten B&ouml;rsentage verpasst hat &ndash; Grafik einblenden.</span>
+          <span class="time">7:00&ndash;8:30</span><span><strong>Fehler 5: Keine Strategie.</strong> &bdquo;Das Geld liegt ohne Plan verteilt auf 5 Konten und 3 Versicherungen.&ldquo; L&ouml;sung: Finanzplan mit klarer Struktur.</span>
+          <span class="time">8:30&ndash;9:30</span><span><strong>CTA:</strong> &bdquo;Erkennen Sie sich wieder? Lassen Sie uns gemeinsam eine Strategie entwickeln, die zu Ihnen passt.&ldquo;</span>
+        </div>
+
+        <h4>Sprechhinweise</h4>
+        <p>Etwas dynamischer als die anderen Videos. Z&auml;hler-Grafik einblenden (Fehler 1, 2, 3...). Spannung aufbauen zum f&uuml;nften Fehler. Bring deine authentischen Beispiele aus der Praxis.</p>
+
+        <div class="tip-box">
+          <strong>Format:</strong> Talking Head mit nummerierten Einblendungen. Jeder Fehler bekommt eine kurze Grafik/Zahl. Guter Schnittrhythmus &ndash; dieses Video darf etwas schneller geschnitten sein.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== 5. WEITERE VIDEOS ===== -->
+<section class="white" id="weitere">
+  <div class="section-inner">
+    <div class="section-label">05 &mdash; Weitere Videos</div>
+    <h2>Videos 5&ndash;13 im &Uuml;berblick</h2>
+    <p class="section-desc">Nach dem ersten Drehtag produzierst du diese Videos selbstst&auml;ndig. Die Reihenfolge ber&uuml;cksichtigt Suchvolumen und Kundenrelevanz. <strong>Wichtig:</strong> Fallstudien-Videos (anonymisierte Kunden-Cases) sind das st&auml;rkste Element f&uuml;r Vertrauen &ndash; die solltest du regelm&auml;&szlig;ig bringen. Alle Videos im Talking-Head-Format.</p>
+
+    <div class="video-list">
+      <div class="video-item">
+        <div class="video-num">5</div>
+        <div class="video-info">
+          <h4>Fallstudie: Wie ein Ingenieur aus Stuttgart &uuml;ber 200.000&euro; Verm&ouml;gen aufbaute</h4>
+          <div class="meta"><span class="tag tag-purple">Fallstudie</span><span class="tag tag-time">8&ndash;12 Min</span></div>
+        </div>
+        <div class="video-keyword">&bdquo;Geldanlage Erfahrung&ldquo;</div>
+      </div>
+      <div class="video-item">
+        <div class="video-num">6</div>
+        <div class="video-info">
+          <h4>Ruhestandsplanung: Reicht mein Geld f&uuml;r die Rente?</h4>
+          <div class="meta"><span class="tag tag-blue">Wissen</span><span class="tag tag-time">10&ndash;15 Min</span></div>
+        </div>
+        <div class="video-keyword">&bdquo;Rentenl&uuml;cke berechnen&ldquo;</div>
+      </div>
+      <div class="video-item">
+        <div class="video-num">7</div>
+        <div class="video-info">
+          <h4>Depot-Check: So erkennen Sie versteckte Kosten in Ihrem Portfolio</h4>
+          <div class="meta"><span class="tag tag-red">Aufkl&auml;rung</span><span class="tag tag-time">8&ndash;12 Min</span></div>
+        </div>
+        <div class="video-keyword">&bdquo;Depot-Check&ldquo;</div>
+      </div>
+      <div class="video-item">
+        <div class="video-num">8</div>
+        <div class="video-info">
+          <h4>Warum ich keine Provisionen annehme &ndash; Mein Weg</h4>
+          <div class="meta"><span class="tag tag-purple">Vertrauen</span><span class="tag tag-time">6&ndash;8 Min</span></div>
+        </div>
+        <div class="video-keyword">Brand-Building</div>
+      </div>
+      <div class="video-item">
+        <div class="video-num">9</div>
+        <div class="video-info">
+          <h4>Immobilie oder ETF? Die ehrliche Rechnung f&uuml;r Stuttgart</h4>
+          <div class="meta"><span class="tag tag-green">Regional</span><span class="tag tag-time">12&ndash;15 Min</span></div>
+        </div>
+        <div class="video-keyword">&bdquo;Immobilie oder ETF&ldquo;</div>
+      </div>
+      <div class="video-item">
+        <div class="video-num">10</div>
+        <div class="video-info">
+          <h4>Wie viel Geld brauche ich, um davon zu leben? Der Freiheitsrechner</h4>
+          <div class="meta"><span class="tag tag-blue">Wissen</span><span class="tag tag-time">10&ndash;12 Min</span></div>
+        </div>
+        <div class="video-keyword">&bdquo;finanzielle Freiheit&ldquo;</div>
+      </div>
+      <div class="video-item">
+        <div class="video-num">11</div>
+        <div class="video-info">
+          <h4>Was kostet eine Honorarberatung wirklich?</h4>
+          <div class="meta"><span class="tag tag-red">Aufkl&auml;rung</span><span class="tag tag-time">6&ndash;8 Min</span></div>
+        </div>
+        <div class="video-keyword">&bdquo;Honorarberatung Kosten&ldquo;</div>
+      </div>
+      <div class="video-item">
+        <div class="video-num">12</div>
+        <div class="video-info">
+          <h4>Erben und Anlegen: Was Sie mit einer Erbschaft tun sollten</h4>
+          <div class="meta"><span class="tag tag-blue">Wissen</span><span class="tag tag-time">10&ndash;12 Min</span></div>
+        </div>
+        <div class="video-keyword">&bdquo;Geld geerbt was tun&ldquo;</div>
+      </div>
+      <div class="video-item">
+        <div class="video-num">13</div>
+        <div class="video-info">
+          <h4>Meine Top 3 Tipps f&uuml;r Unternehmer in Stuttgart zur Altersvorsorge</h4>
+          <div class="meta"><span class="tag tag-green">Regional</span><span class="tag tag-time">8&ndash;10 Min</span></div>
+        </div>
+        <div class="video-keyword">&bdquo;Altersvorsorge Unternehmer&ldquo;</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. SEO & PRODUKTION ===== -->
+<section class="light" id="seo">
+  <div class="section-inner">
+    <div class="section-label">06 &mdash; Produktion &amp; SEO</div>
+    <h2>Technische Empfehlungen</h2>
+
+    <div class="tip-grid">
+      <div class="tip"><strong>Format</strong><span>Talking Head &ndash; du sprichst direkt in die Kamera, Grafiken werden eingeblendet</span></div>
+      <div class="tip"><strong>Upload-Frequenz</strong><span>2 Videos pro Woche &ndash; Konsistenz ist der Schl&uuml;ssel</span></div>
+      <div class="tip"><strong>Videol&auml;nge</strong><span>8&ndash;15 Minuten (optimal f&uuml;r YouTube-Algorithmus und Watch-Time)</span></div>
+      <div class="tip"><strong>Thumbnail</strong><span>Dein Gesicht + gro&szlig;er Text + Kontrast (Navy/Rot deiner Marke nutzen)</span></div>
+      <div class="tip"><strong>Titel</strong><span>Suchbegriff vorne, emotionaler Hook hinten</span></div>
+      <div class="tip"><strong>Beschreibung</strong><span>Erste 2 Zeilen mit Keyword, Terminbuchung, Kapitelmarken</span></div>
+      <div class="tip"><strong>Call-to-Action</strong><span>&bdquo;Kostenloses Erstgespr&auml;ch buchen&ldquo; in jedem Video</span></div>
+      <div class="tip"><strong>Cross-Promotion</strong><span>Jedes Video auf LinkedIn, Facebook und in deinem Newsletter</span></div>
+    </div>
+
+    <div class="callout">
+      <h3>Regionale SEO-Keywords</h3>
+      <p>Dein entscheidender Vorteil gegen&uuml;ber Finanzfluss &amp; Co.: Du kannst &uuml;ber regionale Keywords ranken, wo die gro&szlig;en Kan&auml;le nicht konkurrieren.<br><br>
+      <strong>Finanzberater Stuttgart</strong> &middot; Anlageberatung Stuttgart &middot; Honorarberatung Stuttgart &middot; Honorarberater Stuttgart &middot; Verm&ouml;gensberatung Ludwigsburg &middot; Finanzberatung Heilbronn &middot; ETF Beratung Stuttgart</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6b. SALES FUNNEL & CLV ===== -->
+<section class="white" id="funnel">
+  <div class="section-inner">
+    <div class="section-label">06b &mdash; Sales Funnel &amp; Wirtschaftlichkeit</div>
+    <h2>Vom YouTube-Zuschauer zum Kunden</h2>
+    <p class="section-desc">Jedes Video f&uuml;hrt den Zuschauer in den ersten Schritt deines bew&auml;hrten Beratungsprozesses. Der Customer Lifetime Value rechtfertigt das Marketing-Investment locker.</p>
+
+    <div class="steps">
+      <div class="step"><div class="step-dot">1</div><p><strong>Kostenloses Erstgespr&auml;ch</strong> (15&ndash;30 Min) &ndash; Kennenlernen, Vertrauen aufbauen, Bedarf kl&auml;ren. Dies ist der CTA in jedem Video.</p></div>
+      <div class="step"><div class="step-dot">2</div><p><strong>Wissenstransfer</strong> (ca. 600&euro;) &ndash; Grundlagen erkl&auml;ren: Assetklassen, ETF-Philosophie, warum Prognosefreiheit funktioniert. Der Kunde versteht, was mit seinem Geld passiert.</p></div>
+      <div class="step"><div class="step-dot">3</div><p><strong>Individuelles Finanzkonzept</strong> (ca. 3.000&euro;) &ndash; Pers&ouml;nlicher Anlageplan basierend auf Verm&ouml;gen, Zielen und Risikoprofil.</p></div>
+      <div class="step"><div class="step-dot">4</div><p><strong>Laufende Betreuung</strong> &ndash; Honorar auf verwaltetes Verm&ouml;gen. Langfristige Kundenbeziehung &uuml;ber Jahre.</p></div>
+    </div>
+
+    <div class="callout">
+      <h3>Customer Lifetime Value: 15.000&ndash;30.000&euro;+</h3>
+      <p>Bei deinem durchschnittlichen Kundenverm&ouml;gen von 200K&ndash;500K+ und langfristiger Betreuung liegt der CLV bei 15.000&ndash;30.000&euro; pro Kunde. Selbst wenn YouTube nur 2&ndash;3 Neukunden pro Monat bringt, ist der ROI enorm. Ein einziges gutes Video, das &uuml;ber Jahre gefunden wird, kann dir Dutzende Erstgespr&auml;che bringen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. KPIs ===== -->
+<section class="white" id="kpis">
+  <div class="section-inner">
+    <div class="section-label">07 &mdash; Ziele &amp; n&auml;chste Schritte</div>
+    <h2>Erfolgsmessung</h2>
+
+    <div class="kpi-grid">
+      <div class="kpi"><div class="kpi-label">Abonnenten</div><div class="kpi-val">100</div><div class="kpi-sub">300&ndash;500</div></div>
+      <div class="kpi"><div class="kpi-label">Views / Video</div><div class="kpi-val">100&ndash;300</div><div class="kpi-sub">500&ndash;1.000</div></div>
+      <div class="kpi"><div class="kpi-label">Anfragen / Monat</div><div class="kpi-val">1&ndash;3</div><div class="kpi-sub">3&ndash;5</div></div>
+      <div class="kpi"><div class="kpi-label">Watch-Time</div><div class="kpi-val">20&ndash;25%</div><div class="kpi-sub">25&ndash;30%</div></div>
+      <div class="kpi"><div class="kpi-label">Upload-Frequenz</div><div class="kpi-val">2/Woche</div><div class="kpi-sub">2/Woche</div></div>
+    </div>
+    <p style="text-align:center;font-size:13px;color:var(--gray);margin-top:-8px;">Obere Zahl = realistisches Ziel nach 3 Monaten &middot; <span style="color:#059669;font-weight:700;">Gr&uuml;n</span> = Ziel nach 6 Monaten</p>
+
+    <h3>N&auml;chste Schritte</h3>
+    <div class="steps">
+      <div class="step"><div class="step-dot">1</div><p>YouTube-Kanal anlegen mit professionellem Branding (Banner, Profilbild, Info-Text)</p></div>
+      <div class="step"><div class="step-dot">2</div><p><strong>Erster Drehtag vor Ort:</strong> Wir nehmen Videos 1&ndash;4 zusammen auf</p></div>
+      <div class="step"><div class="step-dot">3</div><p>Wir schneiden die Videos, bauen Grafiken ein, erstellen Thumbnails und laden hoch</p></div>
+      <div class="step"><div class="step-dot">4</div><p>Website-Integration: YouTube-Videos auf deiner Seite einbetten</p></div>
+      <div class="step"><div class="step-dot">5</div><p>Cross-Promotion: Jedes Video auf LinkedIn, Facebook und in deinem Newsletter teilen</p></div>
+      <div class="step"><div class="step-dot">6</div><p>Nach 4 Wochen: Performance-Review zusammen und Content-Plan f&uuml;r Monat 2&ndash;3 anpassen</p></div>
+    </div>
+
+    <div class="callout">
+      <h3>Fazit</h3>
+      <p>Steffen, du hast mit deiner BaFin-Lizenz, der prognosefreien Anlagephilosophie und dem regionalen Fokus eine einzigartige Positionierung, die kein anderer YouTube-Kanal im Raum Stuttgart bedient. Die Kombination aus Aufkl&auml;rungs-Content, Evergreen-Wissen und regionaler Verankerung wird dir innerhalb von 6&nbsp;Monaten sp&uuml;rbar qualifizierte Beratungsanfragen &uuml;ber YouTube bringen. Lass uns loslegen.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 <strong>Schmidtke GmbH</strong> &middot; YouTube-Strategie f&uuml;r Steffen Grebe, Honorarfinanz Stuttgart &middot; Vertraulich</p>
+</footer>
+
+</body>
+</html>
